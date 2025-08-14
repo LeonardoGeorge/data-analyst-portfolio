@@ -1,0 +1,340 @@
+/* ============================= */
+/*  ESTILO NEON TURBINADO        */
+/* ============================= */
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background: radial-gradient(circle at center, #050505 0%, #000 100%);
+    color: #1ef81ed5;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* Efeito de brilho intermitente para o logo */
+.neon-logo {
+    animation: neon-pulse 3s infinite alternate;
+}
+/* Ajuste fino de alinhamento vertical */
+.logo-align {
+    position: relative;
+    top: 2px; /* ajuste este valor conforme necessário */
+}
+
+/* Ou para alinhamento perfeito com a linha de base do texto */
+.logo-baseline {
+    vertical-align: middle;
+    margin-bottom: 0.15em; /* ajuste fino */
+}
+@keyframes neon-pulse {
+    0% {
+        filter: drop-shadow(0 0 5px #9d00ffd7);
+        opacity: 0.8;
+    }
+
+    100% {
+        filter: drop-shadow(0 0 15px #9d00ffb4) drop-shadow(0 0 30px #9d00ff);
+        opacity: 1;
+    }
+}
+
+/* Ou um efeito mais sutil para a versão clean */
+.logo-hover {
+    transition: all 0.3s ease;
+    color: #fff
+}
+
+.logo-hover:hover {
+    transform: rotate(-5deg) scale(1.05);
+    filter: drop-shadow(0 0 5px rgba(74, 222, 128, 0.5));
+}
+
+/* Contêiner de partículas no fundo */
+#particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+section {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+/* Cores neon com brilho */
+.text-neon-green {
+    color: #37ff14c7;
+    text-shadow: 0 0 5px #39ff14, 0 0 15px #37ff14c7, 0 0 30px #37ff14af;
+}
+
+.text-neon-purple {
+    color: #bb13feb4;
+    text-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe, 0 0 30px #bc13fe;
+}
+
+/* Bordas neon */
+.neon-border {
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
+    transition: all 0.3s ease;
+}
+
+.neon-border:hover {
+    box-shadow: 0 0 10px #39ff14, 0 0 25px #39ff14;
+}
+
+/* Efeito de pulsar no título */
+.neon-pulse {
+    animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px #bb13fec4, 0 0 15px #bb13febe;
+    }
+
+    to {
+        text-shadow: 0 0 20px #bb13fecc, 0 0 40px #bb13fed7;
+    }
+}
+
+/* Efeito glitch */
+.glitch {
+    position: relative;
+    display: inline-block;
+    color: #bb13fecb;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 rgba(255, 0, 0, 0.747);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 rgba(0, 0, 255, 0.719);
+    animation: glitch-anim2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(20px, 9999px, 80px, 0);
+    }
+
+    20% {
+        clip: rect(50px, 9999px, 100px, 0);
+    }
+
+    40% {
+        clip: rect(10px, 9999px, 70px, 0);
+    }
+
+    60% {
+        clip: rect(90px, 9999px, 120px, 0);
+    }
+
+    80% {
+        clip: rect(30px, 9999px, 60px, 0);
+    }
+
+    100% {
+        clip: rect(0px, 9999px, 20px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(60px, 9999px, 120px, 0);
+    }
+
+    20% {
+        clip: rect(20px, 9999px, 40px, 0);
+    }
+
+    40% {
+        clip: rect(80px, 9999px, 140px, 0);
+    }
+
+    60% {
+        clip: rect(10px, 9999px, 50px, 0);
+    }
+
+    80% {
+        clip: rect(40px, 9999px, 100px, 0);
+    }
+
+    100% {
+        clip: rect(70px, 9999px, 130px, 0);
+    }
+}
+
+@keyframes glitch-skew {
+    0% {
+        transform: skew(0deg);
+    }
+
+    50% {
+        transform: skew(2deg);
+    }
+
+    100% {
+        transform: skew(-2deg);
+    }
+}
+
+/* Cartões */
+.neon-card {
+    background-color: rgba(10, 10, 10, 0.85);
+    border-radius: 5px;
+    .neon-card {
+            transform: scale(0.98);
+            /* levemente menor no estado normal */
+            transition: transform 0.2s ease-in-out;
+        }
+}
+
+.neon-card:hover {
+    transform: scale(1);
+        /* volta ao tamanho original */
+}
+
+/* Inputs e botões */
+input,
+textarea {
+    background: #111;
+    color: #0aff0a;
+    border: 1px solid #39ff14;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito terminal */
+.terminal-command {
+    font-family: 'Courier New', monospace;
+    color: #0aff0a;
+}
+.btn-neon {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #39ff14;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-neon:hover {
+    background-color: #39ff14;
+    color: #000;
+    box-shadow: 0 0 10px #39ff14, 0 0 30px #39ff14;
+}
+
+.btn-neon span {
+    display: inline-block;
+    animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 0 0 5px #39ff14;
+    }
+
+    to {
+        text-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14;
+    }
+}
+
+
+.contact-section {
+    margin-top: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    /* espaço entre colunas */
+    flex-wrap: wrap;
+    /* permite quebrar em telas pequenas */
+}
+
+.contact-info,
+.contact-form,
+.contact-download {
+    flex: 1;
+    min-width: 250px;
+    /* evita ficar muito apertado */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #39ff14;
+    background: #000;
+    color: #0aff0a;
+}
+
+.contact-form button {
+    padding: 10px;
+    background: #39ff14;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-download {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
