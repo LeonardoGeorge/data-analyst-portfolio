@@ -159,6 +159,7 @@
             <p>■ leonardogeorge30@gmail.com</p>
             <p>● (19) 99003-1768</p>
             <p>🌐 Espanhol Fluente</p>
+            <p>💻 Inglês Fullstack Dev Level  </p>
         </div>
 
         <!-- Coluna central: Formulário -->
